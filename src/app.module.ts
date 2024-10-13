@@ -13,7 +13,9 @@ import { CartModule } from './Cart/cart.module';
 
 @Module({
 	imports: [
-		ConfigModule.forRoot(),
+		ConfigModule.forRoot({
+			isGlobal: true,
+		}),
 		UsersModule,
 		TypeOrmModule.forRoot({
 			type: 'postgres',
